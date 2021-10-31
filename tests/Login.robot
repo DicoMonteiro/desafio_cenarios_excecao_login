@@ -73,7 +73,7 @@ Login Required Fields
 
     Go To Login Page
     Submit Login
-    Alert Spans Should Be
+    Alert Spans Should Be       ${expected_alerts}
 
 
 # Should Be Type Email
