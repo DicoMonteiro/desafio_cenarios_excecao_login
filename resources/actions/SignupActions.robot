@@ -51,14 +51,6 @@ User Should See Congratulations
     ...                         visible     5
 
 
-Alert Span Should Be
-    [Arguments]     ${alert_message}
-
-    Wait For Elements State
-    ...                         css=span[class=error] >> text=${alert_message}
-    ...                         visible     5
-
-
 
 # Tela após cadastrar cliente
 # botão voltar     xpath=//a[contains(text(), "Voltar")]

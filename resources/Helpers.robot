@@ -7,7 +7,7 @@ New Register
     [Arguments]         ${user}
 
     Go To Signup Form
-    Fill Signup Form           ${user}
+    Fill Signup Form    ${user}
     Submit Signup Form
 
 Add User From Database

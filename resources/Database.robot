@@ -26,7 +26,7 @@ Reset Env
 Insert User
     [Arguments]         ${user}
 
-    ${password}           Get Hashed Pass     ${user}[password]
+    ${password}         Get Hashed Pass     ${user}[password]
 
     ${query}            Set Variable        INSERT INTO public.users (name, email, password_hash, is_geek) VALUES ('${user}[name] ${user}[lastname]', '${user}[email]', '${password}', false);
 

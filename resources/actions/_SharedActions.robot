@@ -37,6 +37,13 @@ Modal Content Should Be
     Get Text        ${message}      equal       ${expected_text}
 
 
+Alert Span Should Be
+    [Arguments]     ${alert_message}
+
+    Wait For Elements State
+    ...                         css=span[class=error] >> text=${alert_message}
+    ...                         visible     5
+
 # Alert Message Should Be
 #     [Arguments]         ${message}
 

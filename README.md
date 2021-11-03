@@ -1,6 +1,6 @@
-### Sobre o projeto ###
+### Sobre o Desafio ###
 
-Este projeto foi desenvolvido no curso da QANinja, Gravidade Zero, automação de testes usando o Robot Framework.
+Desafio implementado conforme as especifições solicitadas e documentadas no arquivo: **/docs/login.md** [Desafios](docs/login.md)
 
 ### Pré-condições ###
 
@@ -8,34 +8,14 @@ Este projeto foi desenvolvido no curso da QANinja, Gravidade Zero, automação d
 [x] - Instalar o Node.js 14.15 ou acima;
 [x] - Instalar o Git;
 [x] - Clonar este projeto:
-    [x] - git clone ${URL}
-[x] - Executar o comando:
-    [x] - pip install -r requirements.txt
+    [x] - git clone https://github.com/DicoMonteiro/desafios_getgeeks
 
-### Execução para limpar a base de dado ###
+### Execução do Desafio ###
 
-    robot -l NONE -o NONE -r NONE tasks/Delorean.robot
+    [x] Para executar no linux ou mac:
 
-### Transformando um arquivo sh executável ###
+        ./run.sh
 
-    chmod +x run.sh
-    chmod +x run.bat
+    [x] Para executar no windows:
 
-### Execução dos testes ###
-
-[x] - Sem tags
-
-    robot -d ./logs tests/
-
-[x] - Com tags
-
-    robot -d ./logs -i <nome_tag> tests/
-
-### Execução de limpar e executar os testes ###
-
-    ./run.sh
-
-### Arquivos run.sh e run.bat ###
-
-    [x] - o .sh é para executar no linux ou mac;
-    [x] - o .bat é para executar no windows;
+        ./run.bat

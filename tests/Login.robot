@@ -21,9 +21,9 @@ User success
 
 
 User Not Found
-    [Tags]      attempt_login       login_with_user_not_found
+    [Tags]          attempt_login       user_404
 
-    ${user}         Create Dictionary       email=adriano_almeida@teste.com.br      password=Teste@1234
+    ${user}         Create Dictionary       email=adriano_almeida@404.com.br      password=Teste@1234
 
     Go To Login Page
     Fill Credentials                ${user}
@@ -32,7 +32,7 @@ User Not Found
 
 
 Password Invalid
-    [Tags]      attempt_login       login_with_password_invalid
+    [Tags]          attempt_login       i_pass
 
     ${user}         Create Dictionary       email=adriano@teste.com.br      password=teste123
 
@@ -42,8 +42,21 @@ Password Invalid
     Modal Content Should Be         Usuário e/ou senha inválidos.
 
 
+Incorret Email
+    [Tags]          attempt_login       i_email
+
+    ${user}         Create Dictionary       email=adriano&hotmail.com.br      password=teste123
+
+    Go To Login Page
+    Fill Credentials                    ${user}
+    Submit Login
+    Field Should Be Type Email
+
+
+## DESAFIO 1 DO MÓDULO PRO
+
 Empty Password
-    [Tags]      attempt_login       login_without_password
+    [Tags]          attempt_login       challenge       login_without_password
 
     ${user}         Create Dictionary       email=adriano@teste.com.br      password=${EMPTY}
 
@@ -54,7 +67,7 @@ Empty Password
 
 
 Empty Email
-    [Tags]      attempt_login       login_without_email
+    [Tags]          attempt_login       challenge       login_without_email
 
     ${user}         Create Dictionary       email=${EMPTY}     password=teste123
 
@@ -65,7 +78,7 @@ Empty Email
 
 
 Login Required Fields
-    [Tags]      attempt_login       reqf
+    [Tags]      attempt_login       challenge       reqf
 
     @{expected_alerts}          Create List
     ...                         E-mail obrigatório
@@ -75,13 +88,3 @@ Login Required Fields
     Submit Login
     Alert Spans Should Be       ${expected_alerts}
 
-
-# Should Be Type Email
-#     [Tags]      attempt_login       login_with_email_invalid
-
-#     ${user}         Create Dictionary       email=adriano&teste.com.br      password=teste123
-
-#     Go To Login Page
-#     Fill Credentials                    ${user}
-#     Submit Login
-#     Field Should Be Type Email          Please include an '@' in the email address

@@ -2,6 +2,11 @@
 Documentation           Auth actions
 
 
+
+*** Variable ***
+${INPUT_EMAIL}      id=email
+${INPUT_PASS}       id=password
+
 *** Keywords ***
 Go To Login Page
     Go To       ${BASE_URL}
@@ -11,8 +16,8 @@ Go To Login Page
 Fill Credentials
     [Arguments]     ${user}
 
-    Fill Text       id=email           ${user}[email]
-    Fill Text       id=password        ${user}[password]
+    Fill Text       ${INPUT_EMAIL}     ${user}[email]
+    Fill Text       ${INPUT_PASS}      ${user}[password]
 
 
 Submit Login
@@ -33,10 +38,8 @@ User Should See Your Name
     Get Text        ${element}      contains        ${fullName}
 
 
-# Field Should Be Type Email
-#     [Arguments]     ${alert_message}
+Field Should Be Type Email
 
-#     Wait For Elements State
-#     ...                         css=span[class=error] >> text=${alert_message}
-#     ...                         visible     5
+    Get Property            ${INPUT_EMAIL}        type        equal       email
+
 
