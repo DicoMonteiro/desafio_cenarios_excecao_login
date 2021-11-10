@@ -33,6 +33,14 @@ Quando realizo o login com meu e-mail e senha
 Mas com a e-mail incorreto
 Então deve exibir uma mensagem de alerta do e-mail inválido
 
+##### Cenário: E-mail incompleto
+
+Dado que acesso a página de login
+Quando realizo o login com meu e-mail e senha
+Mas informar o e-mail incompleto
+Então vejo a mensagem de alerta:
+    "email must be a valid email"
+
 ##### Cenário: E-mail em branco
 
 Dado que acesso a página de login

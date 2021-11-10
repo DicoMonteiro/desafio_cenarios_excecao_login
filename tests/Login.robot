@@ -88,3 +88,14 @@ Login Required Fields
     Submit Login
     Alert Spans Should Be       ${expected_alerts}
 
+
+Incomplete Email
+    [Tags]          attempt_login       challenge       email_incomplete
+
+    ${user}         Create Dictionary       email=adriano@teste      password=teste123
+
+    Go To Login Page
+    Fill Credentials                    ${user}
+    Submit Login
+    Alert Span Should Be                email must be a valid email
+

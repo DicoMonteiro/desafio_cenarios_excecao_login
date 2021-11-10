@@ -7,6 +7,7 @@ Desafio implementado conforme as especifições solicitadas e documentadas no ar
 [x] - Instalar o Python 3.7 ou acima; <br>
 [x] - Instalar o Node.js 14.15 ou acima; <br>
 [x] - Instalar o Git; <br>
+[x] - Instalar as libs do projeto: pip install -r requirements.txt
 [x] - Clonar este projeto: git clone https://github.com/DicoMonteiro/desafios_getgeeks
 
 ### Execução do Desafio ###
