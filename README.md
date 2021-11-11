@@ -47,7 +47,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com). Follo
 [x] - Install Python 3.7 or over
 [x] - Install Node.js 14.15 or over
 [x] - Install Git
-[x] - Clone this repository: git clone https://github.com/DicoMonteiro/desafios_getgeeks
+[x] - Clone this repository: git clone https://github.com/DicoMonteiro/getgeeks-gzero
 [x] - Install the libraries of project: pip install -r requirements.txt
 ```
 
