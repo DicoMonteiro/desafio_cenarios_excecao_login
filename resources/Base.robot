@@ -8,6 +8,7 @@ Library         factories/massas_dados.py
 Resource        actions/AuthActions.robot
 Resource        actions/SignupActions.robot
 Resource        actions/_SharedActions.robot
+Resource        actions/GeekActions.robot
 Resource        Database.robot
 Resource        Helpers.robot
 
@@ -20,13 +21,13 @@ ${BASE_URL}                 https://getgeeks-adriano.herokuapp.com
 *** Keywords ***
 Start Session
 
-    New Browser     chromium    headless=False      slowMo=00:00:00.5
+    New Browser     chromium    headless=False      slowMo=00:00:00
     New Page        ${BASE_URL}
     
 
 End Session
 
-    Take Screenshot
+    Take Screenshot         fullPage=True
 
 
 Home Page Validation

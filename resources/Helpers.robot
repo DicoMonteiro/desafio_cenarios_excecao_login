@@ -31,6 +31,16 @@ Signup With Short Password
     Alert Span Should Be        Informe uma senha com pelo menos 6 caracteres
 
 
+Do Login
+    [Arguments]         ${user}
+
+    Go To Login Page
+    Fill Credentials                ${user}
+    Submit Login
+    User Should See Your Name       ${user}
+
+
+
 # Trying Signup
 #     [Arguments]     ${user}     ${message}
 

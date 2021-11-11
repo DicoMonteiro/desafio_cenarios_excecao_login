@@ -12,7 +12,7 @@ Test Teardown       End Session
 Register New User
     [Tags]      new_user
 
-    ${user}                     Factory New User
+    ${user}                     Factory User        faker
 
     Home Page Validation        ${message_default}
 
@@ -25,7 +25,7 @@ Register New User
 Try Register New User With Email Duplicate
     [Tags]      attempt_signup      duplicate
 
-    ${user}                     Factory New User
+    ${user}                     Factory User        faker
 
     Home Page Validation        ${message_default}
 
@@ -38,7 +38,7 @@ Try Register New User With Email Duplicate
 Register New User With Email Invalid
     [Tags]      attempt_signup
 
-    ${user}                     Factory Email Invalid
+    ${user}                     Factory User        wrong_email
 
     Home Page Validation        ${message_default}
 

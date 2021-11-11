@@ -12,7 +12,7 @@ Test Teardown       End Session
 User success
     [Tags]      login_success
 
-    ${user_login}       Factory User Login
+    ${user_login}       Factory User        user_login
 
     Go To Login Page
     Fill Credentials                ${user_login}
