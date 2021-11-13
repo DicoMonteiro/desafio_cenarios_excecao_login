@@ -10,7 +10,7 @@
 <h4 align="center">
   It's an app for waste collection created during <a href="https://gravidadezero.qaninja.academy">Gravidade Zero</a>
   <br>
-  Created with :purple_heart: by <a href="https://qaninja.academy/">QANinja</a>
+  Created with :purple_heart:  by <a href="https://qaninja.academy/">QANinja</a>
 </h4>
 
 ## :video_camera: Demonstration
@@ -73,6 +73,6 @@ This project is under the MIT license. See the [LICENSE](https://github.com/Dico
 
 ---
 
-Made with :purple_heart: by Adriano Almeida :wave: [Get in touch!](https://www.linkedin.com/in/adriano-barreto-monteiro-almeida/)
+Made with :purple_heart:  by Adriano Almeida :wave:  [Get in touch!](https://www.linkedin.com/in/adriano-barreto-monteiro-almeida/)
 
 [vc]: https://code.visualstudio.com/
