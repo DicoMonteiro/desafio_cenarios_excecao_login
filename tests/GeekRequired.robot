@@ -4,74 +4,74 @@ Documentation           Geek Required Test Suite
 Resource            ${EXECDIR}/resources/Base.robot
 
 
-Suite Setup          Geek Without Fill Form
+Suite Setup          Login Session
 Test Teardown        End Session
 
-
-*** Variable ***
-${WHATSAPP}     id=whatsapp
-${DESC}         id=desc
-${COST}         id=cost
-
 *** Test Case ***
+Short Description
+    [Template]        Geek Without Fill Form
+    short_desc        A descrição deve ter no minimo 80 caracteres
+
+Long Description
+    [Template]        Geek Without Fill Form
+    long_desc         A descrição deve ter no máximo 255 caracteres
+
 ## DESAFIO FINAL DO MÓDULO PRO
-WhatsApp Is Required
-    [Tags]      geek_required
-    Clear Text      ${WHATSAPP}
-    Submit Geek Form
-    Alert Span Should Be        O Whatsapp deve ter 11 digitos contando com o DDD
+Printer Repair is required
+    [Template]        Geek Without Fill Form
+    without_printer_repair          Por favor, informe se você é um Geek Supremo
+
+Work is required
+    [Template]        Geek Without Fill Form
+    without_work      Por favor, selecione o modelo de trabalho 
+
+WhatsApp is required
+    [Template]        Geek Without Fill Form
+    without_whatsapp      O Whatsapp deve ter 11 digitos contando com o DDD 
 
 WhatsApp Only DDD
-    [Tags]      geek_required
-    Fill Text       ${WHATSAPP}     11
-    Submit Geek Form
-    Alert Span Should Be        O Whatsapp deve ter 11 digitos contando com o DDD
+    [Template]        Geek Without Fill Form
+    only_ddd_whatsapp      O Whatsapp deve ter 11 digitos contando com o DDD 
 
 WhatsApp With 10 digits
-    [Tags]      geek_required
-    Fill Text       ${WHATSAPP}     1188888888
-    Submit Geek Form
-    Alert Span Should Be        O Whatsapp deve ter 11 digitos contando com o DDD
+    [Template]        Geek Without Fill Form
+    with_10_digits_whatsapp      O Whatsapp deve ter 11 digitos contando com o DDD 
 
 Description is required
-    [Tags]      geek_required
-    Fill Text       ${WHATSAPP}     11888888889
-    Clear Text      ${DESC}
-    Submit Geek Form
-    Alert Span Should Be        Informe a descrição do seu trabalho
+    [Template]        Geek Without Fill Form
+    without_desc      Informe a descrição do seu trabalho
 
 Cost is required
-    [Tags]      geek_required
-    Fill Text       ${DESC}     Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.
-    Clear Text      ${COST}
-    Submit Geek Form
-    Alert Span Should Be        Valor hora deve ser numérico
+    [Template]        Geek Without Fill Form
+    without_cost      Valor hora deve ser numérico
 
 Cost contains number and text
-    [Tags]      geek_required
-    Fill Text       ${COST}       teste12
-    Submit Geek Form
-    Alert Span Should Be        Valor hora deve ser numérico
+    [Template]        Geek Without Fill Form
+    with_number_text_cost      Valor hora deve ser numérico
 
 Cost contains text
-    [Tags]      geek_required
-    Fill Text       ${COST}       teste
-    Submit Geek Form
-    Alert Span Should Be        Valor hora deve ser numérico
+    [Template]        Geek Without Fill Form
+    with_only_text_cost      Valor hora deve ser numérico
 
 Cost contains special characters
-    [Tags]      geek_required
-    Fill Text       ${COST}       12#$%%&!
-    Submit Geek Form
-    Alert Span Should Be        Valor hora deve ser numérico
+    [Template]        Geek Without Fill Form
+    with_special_characters_cost      Valor hora deve ser numérico
 
 
 *** Keywords ***
-Geek Without Fill Form
+Login Session
 
-    ${user_geek}      Factory User      be_geek
+    ${user_geek}        Factory User        be_geek
 
     Start Session
-    Do Login            ${user_geek}
+    Do Login                    ${user_geek}
     Go To Geek Form
-    Fill Geek Form      ${user_geek}[geek_profile]
+
+Geek Without Fill Form
+    [Arguments]       ${type_user}       ${message}
+
+    ${user}           Factory User       ${type_user}
+
+    Fill Geek Form              ${user}[geek_profile]
+    Submit Geek Form
+    Alert Span Should Be        ${message}

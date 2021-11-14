@@ -97,7 +97,111 @@ def factory_user(target):
                 "work": "",
                 "cost": "100"
             }
-        }
+        },
+        "without_whatsapp": {
+            "name": "Kim",
+            "lastname": "Dotcom",
+            "email": "kim@dot.com",
+            "password": "Teste@1234",
+            "geek_profile": {
+                "whatsapp": "",
+                "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.",
+                "printer_repair": "Sim",
+                "work": "Remoto",
+                "cost": "100"
+            }
+        },
+        "only_ddd_whatsapp": {
+            "name": "Kim",
+            "lastname": "Dotcom",
+            "email": "kim@dot.com",
+            "password": "Teste@1234",
+            "geek_profile": {
+                "whatsapp": "11",
+                "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.",
+                "printer_repair": "Sim",
+                "work": "Remoto",
+                "cost": "100"
+            }
+        },
+        "with_10_digits_whatsapp": {
+            "name": "Kim",
+            "lastname": "Dotcom",
+            "email": "kim@dot.com",
+            "password": "Teste@1234",
+            "geek_profile": {
+                "whatsapp": "1198765432",
+                "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.",
+                "printer_repair": "Sim",
+                "work": "Remoto",
+                "cost": "100"
+            }
+        },
+        "without_desc": {
+            "name": "Kim",
+            "lastname": "Dotcom",
+            "email": "kim@dot.com",
+            "password": "Teste@1234",
+            "geek_profile": {
+                "whatsapp": "11987654322",
+                "desc": "",
+                "printer_repair": "Sim",
+                "work": "Remoto",
+                "cost": ""
+            }
+        },
+        "without_cost": {
+            "name": "Kim",
+            "lastname": "Dotcom",
+            "email": "kim@dot.com",
+            "password": "Teste@1234",
+            "geek_profile": {
+                "whatsapp": "11987654322",
+                "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.",
+                "printer_repair": "Sim",
+                "work": "Remoto",
+                "cost": ""
+            }
+        },
+        "with_number_text_cost": {
+            "name": "Kim",
+            "lastname": "Dotcom",
+            "email": "kim@dot.com",
+            "password": "Teste@1234",
+            "geek_profile": {
+                "whatsapp": "11987654322",
+                "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.",
+                "printer_repair": "Sim",
+                "work": "Remoto",
+                "cost": "teste12"
+            }
+        },
+        "with_only_text_cost": {
+            "name": "Kim",
+            "lastname": "Dotcom",
+            "email": "kim@dot.com",
+            "password": "Teste@1234",
+            "geek_profile": {
+                "whatsapp": "11987654322",
+                "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.",
+                "printer_repair": "Sim",
+                "work": "Remoto",
+                "cost": "teste"
+            }
+        },
+        "with_special_characters_cost": {
+            "name": "Kim",
+            "lastname": "Dotcom",
+            "email": "kim@dot.com",
+            "password": "Teste@1234",
+            "geek_profile": {
+                "whatsapp": "11987654322",
+                "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.",
+                "printer_repair": "Sim",
+                "work": "Remoto",
+                "cost": "12#$%&!"
+            }
+        },
     }
     return data[target]
     

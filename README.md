@@ -42,7 +42,6 @@ To clone and run this application, you'll need [Git](https://git-scm.com). Follo
 
 ### Pré-conditions ###
 
-
 ```bash
 [x] - Install Python 3.7 or over
 [x] - Install Node.js 14.15 or over
