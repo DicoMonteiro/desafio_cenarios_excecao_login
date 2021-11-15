@@ -115,7 +115,7 @@ def factory_user(target):
                 "desc": "",
                 "printer_repair": "Sim",
                 "work": "Remoto",
-                "cost": ""
+                "cost": "150"
             }
         },
         "without_cost": {
