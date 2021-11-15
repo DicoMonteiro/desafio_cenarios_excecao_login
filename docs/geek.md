@@ -134,7 +134,7 @@ Então vejo a mensagem de alerta:
     "Por favor, selecione o modelo de trabalho"
 
 
-### Resumo do Desafio Final Módulo PRO###
+### Resumo do Desafio Final Módulo PRO
 
 1 - whatsapp em branco; - OK <br>
 2 - whatsapp somente DDD; - OK <br>
@@ -144,9 +144,9 @@ Então vejo a mensagem de alerta:
 6 - valor hora com alfanumerico; - OK <br>
 7 - valor hora com letras; - OK <br>
 8 - valor hora com caracteres especiais; - OK <br>
-EXTRAS:
+EXTRAS: <br>
 9 - conserta impressora em branco; - OK <br>
 10 - modelo de trabalho em branco; - OK <br>
 
-Dica 1: Usa o modelo de template de teste
+Dica 1: Usa o modelo de template de teste  <br>
 Dica 2: O login ficará melhor se for executado uma única vez para todos os comportamentos.
