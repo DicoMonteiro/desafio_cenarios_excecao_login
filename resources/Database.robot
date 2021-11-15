@@ -42,11 +42,3 @@ Users Seed
     ${user_geek}        Factory User        be_geek
 
     Insert User         ${user_geek}
-
-    # ${user_short_desc}        Factory User        short_desc
-
-    # Insert User         ${user_short_desc}
-
-    # ${user_long_desc}        Factory User        long_desc
-
-    # Insert User         ${user_long_desc}
