@@ -5,7 +5,7 @@ Resource            ${EXECDIR}/resources/Base.robot
 
 
 Suite Setup          Login Session
-Test Teardown        End Session
+Test Teardown        After Test
 
 *** Test Case ***
 Short Description

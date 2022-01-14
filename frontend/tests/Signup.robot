@@ -5,12 +5,12 @@ Resource            ${EXECDIR}/resources/Base.robot
 
 
 Test Setup          Start Session
-Test Teardown       End Session
+Test Teardown       After Test
 
 
 *** Test Case ***
 Register New User
-    [Tags]      new_user
+    [Tags]      new_user        smoke
 
     ${user}                     Factory User        faker
 

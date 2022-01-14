@@ -1,4 +1,7 @@
 .DS_Store
 logs
 __pycache__
-backup
+frontend/.pabotsuitenames
+frontend/logs
+backend/logs
+backend/.pabotsuitenames

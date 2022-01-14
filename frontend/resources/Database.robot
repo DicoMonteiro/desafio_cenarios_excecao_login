@@ -19,8 +19,11 @@ Connect To Postgres
 
 Reset Env
 
+    # ${user_login}       Factory User        user_login
+
     Execute SQL String          DELETE from public.geeks;
     Execute SQL String          DELETE from public.users;
+    # Execute SQL String          DELETE from public.users where email = '${user_login}[email]';
 
 
 Insert User
@@ -42,3 +45,7 @@ Users Seed
     ${user_geek}        Factory User        be_geek
 
     Insert User         ${user_geek}
+
+    ${user_attempt_be_geek}        Factory User        attempt_be_geek
+
+    Insert User         ${user_attempt_be_geek}

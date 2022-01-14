@@ -4,6 +4,7 @@ Documentation           Gerenciador de Libraries e sessões do browser
 Library         Browser
 Library         Collections
 Library         factories/massas_dados.py
+Library         utils.py
 
 Resource        actions/AuthActions.robot
 Resource        actions/SignupActions.robot
@@ -21,13 +22,15 @@ ${BASE_URL}                 https://getgeeks-adriano.herokuapp.com
 *** Keywords ***
 Start Session
 
-    New Browser     chromium    headless=False      slowMo=00:00:00
-    New Page        ${BASE_URL}
-    
+    # New Browser             chromium    headless=False      slowMo=00:00:00
+    New Browser             ${BROWSER}    headless=${HEADLESS}      slowMo=00:00:00
+    New Page                ${BASE_URL}
+    # Importante alinhar com o PO sobre a resolução média ou minima da tela
+    Set Viewport Size       1280    768
 
-End Session
-
-    Take Screenshot         fullPage=True
+After Test
+    ${shot_name}            Screenshot Name
+    Take Screenshot         fullPage=True       filename=${shot_name}
 
 
 Home Page Validation

@@ -5,12 +5,13 @@ Resource            ${EXECDIR}/resources/Base.robot
 
 
 Test Setup          Start Session
-Test Teardown       End Session
+Test Teardown       After Test
 
 
 *** Test Case ***
 Be a Geek
-    [Tags]      be_geek
+    [Tags]      be_geek     smoke
+    
     ${user_geek}      Factory User      be_geek
 
     Do Login          ${user_geek}

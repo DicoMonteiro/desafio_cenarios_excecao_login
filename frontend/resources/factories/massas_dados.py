@@ -154,5 +154,18 @@ def factory_user(target):
                 "cost": "12#$%&!"
             }
         },
+         "attempt_be_geek": {
+            "name": "Dio",
+            "lastname": "Netcom",
+            "email": "dio@net.com",
+            "password": "Teste@1234",
+            "geek_profile": {
+                "whatsapp": "11999999999",
+                "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.",
+                "printer_repair": "Sim",
+                "work": "Remoto",
+                "cost": "100"
+            }
+        }
     }
     return data[target]
