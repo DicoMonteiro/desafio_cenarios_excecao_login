@@ -1,6 +1,7 @@
 .DS_Store
 logs
 __pycache__
+github.txt
 frontend/.pabotsuitenames
 frontend/logs
 backend/logs
