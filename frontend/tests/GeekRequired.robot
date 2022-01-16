@@ -1,11 +1,11 @@
 *** Settings ***
 Documentation           Geek Required Test Suite
 
-Resource            ${EXECDIR}/resources/Base.robot
+Resource                ${EXECDIR}/resources/Base.robot
 
 
 Suite Setup          Login Session
-Test Teardown        After Test
+Test Template        Geek Without Fill Form
 
 *** Test Case ***
 Short Description
@@ -75,3 +75,5 @@ Geek Without Fill Form
     Fill Geek Form              ${user}[geek_profile]
     Submit Geek Form
     Alert Span Should Be        ${message}
+
+    After Test
