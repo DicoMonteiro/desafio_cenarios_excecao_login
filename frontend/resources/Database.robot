@@ -38,14 +38,20 @@ Insert User
 
 Users Seed
 
-    ${user_login}       Factory User        user_login
+    # ${user_login}       Factory User        user_login
 
-    Insert User         ${user_login}
+    # Insert User         ${user_login}
 
-    ${user_geek}        Factory User        be_geek
+    # ${user_geek}        Factory User        be_geek
 
-    Insert User         ${user_geek}
+    # Insert User         ${user_geek}
 
-    ${user_attempt_be_geek}        Factory User        attempt_be_geek
+    # ${user_attempt_be_geek}        Factory User        attempt_be_geek
 
-    Insert User         ${user_attempt_be_geek}
+    # Insert User         ${user_attempt_be_geek}
+
+    ${users}            Users To Insert Db
+
+    FOR  ${user}    IN      @{users}
+        Insert User         ${user}
+    END

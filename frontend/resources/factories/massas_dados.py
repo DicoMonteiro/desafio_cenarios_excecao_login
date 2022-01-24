@@ -10,6 +10,12 @@ def get_hashed_pass(password):
     
 
 # Gerador de massa de dados
+def users_to_insert_db():
+    return [
+        factory_user('user_login'),
+        factory_user('be_geek'),
+        factory_user('attempt_be_geek')
+    ]
 
 def factory_user(target):
     name = faker.first_name()
