@@ -10,8 +10,10 @@ Resource        actions/AuthActions.robot
 Resource        actions/SignupActions.robot
 Resource        actions/_SharedActions.robot
 Resource        actions/GeekActions.robot
+
 Resource        Database.robot
 Resource        Helpers.robot
+Resource        Services.robot
 
 *** Variable ***
 ${image_default}            css=img[alt="Getgeeks"]

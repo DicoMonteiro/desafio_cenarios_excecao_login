@@ -2,6 +2,7 @@
 logs
 __pycache__
 github.txt
+frontend/tests/GeekRequired.robot
 frontend/.pabotsuitenames
 frontend/logs
 backend/logs

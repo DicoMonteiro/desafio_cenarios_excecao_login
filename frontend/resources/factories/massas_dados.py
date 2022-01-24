@@ -14,7 +14,10 @@ def users_to_insert_db():
     return [
         factory_user('user_login'),
         factory_user('be_geek'),
-        factory_user('attempt_be_geek')
+        factory_user('attempt_be_geek'),
+        factory_user('search_alien'),
+        factory_user('search_common'),
+        factory_user('searcher')
     ]
 
 def factory_user(target):
@@ -169,6 +172,38 @@ def factory_user(target):
                 "whatsapp": "11999999999",
                 "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.",
                 "printer_repair": "Sim",
+                "work": "Remoto",
+                "cost": "100"
+            }
+        },
+        "searcher": {
+            "name": "Johnny",
+            "lastname": "Lawrence",
+            "email": "johnny@cobrakai.com",
+            "password": "Teste@1234"
+        },
+        "search_alien": {
+            "name": "Dok",
+            "lastname": "Ock",
+            "email": "dok@oscorp.com",
+            "password": "Teste@1234",
+            "geek_profile": {
+                "whatsapp": "11999999999",
+                "desc": "Faço conserto de qualquer impressora. Matricial a fita, Matricial a fita colorida, a laser, a jato de tinta e também impressora 3D.",
+                "printer_repair": "Sim",
+                "work": "Presencial",
+                "cost": "250"
+            }
+        },
+        "search_common": {
+            "name": "Peter",
+            "lastname": "Parker",
+            "email": "peter@parker.com",
+            "password": "Teste@1234",
+            "geek_profile": {
+                "whatsapp": "11999999999",
+                "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.",
+                "printer_repair": "Não",
                 "work": "Remoto",
                 "cost": "100"
             }
