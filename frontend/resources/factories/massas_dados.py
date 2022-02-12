@@ -191,7 +191,7 @@ def factory_user(target):
                 "whatsapp": "11999999999",
                 "desc": "Faço conserto de qualquer impressora. Matricial a fita, Matricial a fita colorida, a laser, a jato de tinta e também impressora 3D.",
                 "printer_repair": "Sim",
-                "work": "Presencial",
+                "work": "Presencial".lower(),
                 "cost": "250"
             }
         },
@@ -202,9 +202,9 @@ def factory_user(target):
             "password": "Teste@1234",
             "geek_profile": {
                 "whatsapp": "11999999999",
-                "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema, eu posso resolver, bem como consertar impressoa EPSON e HP. Também instalo, desistalo e configuro aplicativos.",
+                "desc": "Seu computador está lento? Talvez seja um vírus, malware ou outras inconsistência no sistema win 95 ou 97, eu posso resolver. Também instalo, desistalo e configuro aplicativos.",
                 "printer_repair": "Não",
-                "work": "Remoto",
+                "work": "Remoto".lower(),
                 "cost": "100"
             }
         }

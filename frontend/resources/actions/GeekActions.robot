@@ -17,6 +17,12 @@ Go To Geek Form
 
     Get Text        ${element}      contains        Trabalhe com suporte técnico quando e onde quiser
 
+Go To Geeks
+    
+    Click       css=a[href="/geeks"] >> text=Geeks
+
+    Wait For Elements State     css=.title strong >> text=Estes são os Geeks disponíveis.
+    ...                         visible     5
 
 Fill Geek Form
     [Arguments]         ${geek_profile}
@@ -46,11 +52,26 @@ Fill Geek Form
 
     Fill Text       id=cost         ${geek_profile}[cost]
 
+Fill Search Form
+    [Arguments]         ${target_option}       ${target_text}
+
+    IF      '${target_option}'
+        Select Options By       id=printer_repair       value        ${target_option}
+    END
+
+    IF      '${target_text}'
+        Fill Text               id=desc                 ${target_text}
+    END
+
+
 
 Submit Geek Form
 
     Click       css=button >> text=Quero ser um Geek
 
+Submit Search Form
+
+    Click       css=button[type="submit"] >> text=Buscar
 
 Geek Form Should Be Success
     Wait For Elements State     css=h1 >> text=Parabéns!        visible     5
@@ -67,3 +88,31 @@ Back To Home GetGeeks
 Reset Geek Form
     # Limpar o formulário antes de uma nova interação
     Execute Javascript          document.getElementsByClassName("be-geek-form")[0].reset();
+
+Geek Should Be Found
+    [Arguments]     ${geek}
+
+    ${fullName}          Set Variable        ${geek}[name] ${geek}[lastname]
+
+    ${target_geek}       Get Element         xpath=//strong[contains(text(), "${fullName}")]/../../..
+
+    ${work}              Convert To Lower Case           ${geek}[geek_profile][work]
+
+    Get Text        ${target_geek}       contains        Atendimento ${work}
+    Get Text        ${target_geek}       contains        ${geek}[geek_profile][desc]
+    Get Text        ${target_geek}       contains        ${geek}[geek_profile][cost]
+
+    Set Suite Variable        ${target_geek}
+
+
+Alien Icon Should Be Visible
+    Get Text        ${target_geek}       contains        👽
+
+Search Alert Should Be
+    [Arguments]         ${expect_alert}
+
+    ${element}      Set Variable        css=.search-not-found p
+
+    Wait For Elements State         ${element}      visible     5
+
+    Get Text        ${element}      contains        ${expect_alert}

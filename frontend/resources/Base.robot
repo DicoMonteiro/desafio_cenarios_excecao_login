@@ -3,6 +3,8 @@ Documentation           Gerenciador de Libraries e sessões do browser
 
 Library         Browser
 Library         Collections
+Library         String
+
 Library         factories/massas_dados.py
 Library         utils.py
 
