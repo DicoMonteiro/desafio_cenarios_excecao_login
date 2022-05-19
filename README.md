@@ -63,7 +63,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com). Follo
 
 ```
 
-## :information_source: More About The Challenge
+## :information_source: More About The Challenge 
 
 Desafio implementado conforme as especifições solicitadas e documentadas no arquivo: [/docs/geek.md](docs/geek.md)
 
